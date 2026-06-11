@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syntheses</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        color: #333;
+        background: #f8f9fa;
+    }
+    /* Left Navigation */
+    #sidebar {
+        width: 350px;
+        min-width: 350px;
+        height: 100vh;
+        overflow-y: auto;
+        background: #1a1a2e;
+        color: #ccc;
+        padding: 15px 10px;
+        font-size: 13px;
+        border-right: 2px solid #16213e;
+    }
+    #sidebar h1 {
+        color: #e94560;
+        font-size: 18px;
+        margin-bottom: 8px;
+        padding: 5px;
+    }
+    #sidebar input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 12px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        background: #16213e;
+        color: #eee;
+        font-size: 13px;
+    }
+    #sidebar ul {
+        list-style: none;
+    }
+    .nav-paper {
+        margin-bottom: 4px;
+    }
+    .nav-paper > .paper-link {
+        display: block;
+        padding: 6px 8px;
+        color: #e0e0e0;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 12px;
+        border-radius: 3px;
+        word-break: break-word;
+    }
+    .nav-paper > .paper-link:hover {
+        background: #16213e;
+        color: #e94560;
+    }
+    .nav-reviews {
+        display: none;
+        margin-left: 12px;
+        margin-bottom: 6px;
+    }
+    .nav-paper.expanded .nav-reviews {
+        display: block;
+    }
+    .nav-reviews li a {
+        display: block;
+        padding: 3px 8px;
+        color: #8899aa;
+        text-decoration: none;
+        font-size: 11px;
+        border-radius: 3px;
+    }
+    .nav-reviews li a:hover {
+        color: #e94560;
+        background: #0f3460;
+    }
+    /* Main Content */
+    #content {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 30px 50px;
+        scroll-behavior: smooth;
+    }
+    .paper {
+        margin-bottom: 20px;
+    }
+    .paper h2 {
+        color: #1a1a2e;
+        font-size: 20px;
+        border-bottom: 3px solid #e94560;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+        word-break: break-word;
+    }
+    .review {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 20px 25px;
+        margin-bottom: 15px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .review h3 {
+        color: #0f3460;
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+    .review-content {
+        line-height: 1.7;
+        font-size: 14px;
+    }
+    .review-content h1, .review-content h2, .review-content h3,
+    .review-content h4, .review-content h5 {
+        margin-top: 16px;
+        margin-bottom: 8px;
+        color: #1a1a2e;
+    }
+    .review-content p { margin-bottom: 10px; }
+    .review-content ul, .review-content ol { margin: 10px 0 10px 25px; }
+    .review-content li { margin-bottom: 4px; }
+    .review-content table {
+        border-collapse: collapse;
+        margin: 10px 0;
+        font-size: 13px;
+    }
+    .review-content table th, .review-content table td {
+        border: 1px solid #dee2e6;
+        padding: 6px 10px;
+    }
+    .review-content table th { background: #f1f3f5; }
+    .review-content code {
+        background: #f1f3f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: 13px;
+    }
+    .review-content pre {
+        background: #1a1a2e;
+        color: #e0e0e0;
+        padding: 12px;
+        border-radius: 5px;
+        overflow-x: auto;
+        margin: 10px 0;
+    }
+    .review-content pre code {
+        background: none;
+        color: inherit;
+    }
+    .back-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 14px;
+        background: #e94560;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+    .back-btn:hover {
+        background: #c73e54;
+    }
+    .paper-divider {
+        border: none;
+        border-top: 2px dashed #dee2e6;
+        margin: 30px 0;
+    }
+    .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<nav id="sidebar">
+    <h1>Syntheses</h1>
+    <input type="text" id="search" placeholder="Filter..." autocomplete="off">
+    <ul id="nav-list">
+        
+            <li class="nav-paper">
+                <a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1" class="paper-link">micro_1__work_1__tools_1__CA_1__sp_1__de_1</a>
+                <ul class="nav-reviews"><li><a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1--synthesis">Synthesis</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1--chief-architect-review">Chief Architect Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1--deep-learnging-and-ai-hardware-inference-review">Deep Learnging And Ai Hardware Inference Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1--dr-microarch-reader-review">Dr Microarch Reader Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1--prof-simtools-reader-review">Prof Simtools Reader Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1--prof-workloads-reader-review">Prof Workloads Reader Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1--sparsity-aware-machine-learning-accelerators-review">Sparsity Aware Machine Learning Accelerators Review</a></li></ul>
+            </li>
+        
+    </ul>
+</nav>
+
+<main id="content">
+    <div id="top"></div>
+    
+            <section class="paper" id="micro-1-work-1-tools-1-ca-1-sp-1-de-1">
+                <h2>micro_1__work_1__tools_1__CA_1__sp_1__de_1</h2>
+                
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-sp-1-de-1--synthesis">
+                    <h3>Synthesis</h3>
+                    <div class="review-content"><h1 id="master-class-reading-guide-focus-architecture-paper">Master Class Reading Guide: Focus Architecture Paper</h1>
+<h2 id="1-the-real-abstract-no-hype-summary">1. The "Real" Abstract (No-Hype Summary)</h2>
+<p><strong>What they actually built:</strong> A hardware module (the "Focus Unit") that sits between a systolic array's output and DRAM, intercepting computed values and compressing them before memory write-back. The compression operates at three granularities:</p>
+<ol>
+<li><strong>Token-level:</strong> Uses attention scores to identify which visual tokens the text query cares about, discarding the rest</li>
+<li><strong>Block-level:</strong> Groups remaining tokens into 2×2×2 spatiotemporal windows and compares within these local regions</li>
+<li><strong>Vector-level:</strong> Splits 3584-dimensional token embeddings into 32-dimensional chunks and deduplicates similar chunks</li>
+</ol>
+<p><strong>The core bet:</strong> Video redundancy is so extreme (~80% claimed) that a custom compression unit, tightly coupled to systolic array output tiles, can eliminate most off-chip traffic before it happens.</p>
+<p><strong>What it isn't:</strong> This is not a new model architecture, not a new training method, and not a general-purpose accelerator. It's a specialized compression engine for a specific workload class (video VLMs on systolic arrays).</p>
+<hr />
+<h2 id="2-the-rashomon-synthesis-conflicting-perspectives">2. The "Rashomon" Synthesis (Conflicting Perspectives)</h2>
+<p>The experts viewed this paper through fundamentally different lenses, revealing the core tensions in the work:</p>
+<p><strong>The Microarchitecture Perspective (Dr. Microarch)</strong> loved the GEMM-tile alignment: <em>"The 32-element vector is exactly what one row of the systolic array produces per cycle. By operating at this granularity, similarity detection can be pipelined with GEMM execution."</em> The conflict-free memory banking scheme is elegant engineering.</p>
+<p><strong>However</strong>, the same expert flagged that the streaming claims have caveats: the Similarity Scatter module requires a 2a-wide accumulator (64 elements), meaning scatter takes 2 cycles per vector, not 1. For low-sparsity tiles, this becomes the bottleneck.</p>
+<p><strong>The Workloads Perspective (Prof. Workloads)</strong> was skeptical of the evaluation: <em>"All three benchmarks are video understanding tasks. Where are the stress tests?"</em> The concern is that the 80% sparsity number is workload-dependent—adversarial inputs (rapid scene cuts, high-frequency textures) could defeat the similarity detection entirely.</p>
+<p><strong>The Simulation Tools Perspective (Prof. SimTools)</strong> raised the trace-driven simulation problem: <em>"They're using trace-driven simulation for a technique that introduces dynamic, input-dependent sparsity."</em> The "92.2% average utilization" is averaged over benchmark traces, but the system behavior on out-of-distribution inputs is unknown.</p>
+<p><strong>The Industry Perspective (Chief Architect)</strong> delivered the harshest verdict: <em>"Strip away the simulator artifacts, and you're looking at maybe 1.5× real-world speedup with significant verification overhead."</em> The content-dependent sparsity creates thermal hotspots, DVFS instability, and verification nightmares. <em>"For any security-sensitive deployment, Focus is dead on arrival"</em> due to timing side-channels.</p>
+<p><strong>The Core Tension:</strong> This paper optimizes for the <em>average case</em> on <em>favorable workloads</em>, but production systems must design for <em>worst cases</em> on <em>adversarial inputs</em>. The academic contribution is real; the path to silicon is unclear.</p>
+<hr />
+<h2 id="3-the-magic-trick-the-core-mechanism">3. The "Magic Trick" (The Core Mechanism)</h2>
+<p><strong>The one insight that makes everything work:</strong> Vector-level granularity reveals dramatically more redundancy than token-level granularity.</p>
+<p>Look at Figure 2(b) carefully. At 3584 dimensions (full token), only 18% of vector pairs exceed 0.9 cosine similarity. At 32 dimensions, <strong>64% exceed 0.9 similarity</strong>. This isn't just "smaller chunks are more similar"—it's a consequence of how video motion works.</p>
+<p><strong>Why this matters physically:</strong> When a dog walks across the frame, token <code>h</code> in frame B doesn't perfectly align with any single token in frame A. But <em>parts</em> of token <code>h</code> (specific 32-dim vectors) might match parts of tokens <code>c</code> and <code>d</code> from frame A. Token-level matching misses this; vector-level matching captures it.</p>
+<p><strong>The hardware alignment:</strong> The vector size (32) equals the PE array width (a=32) equals the GEMM tile's n-dimension. This isn't coincidental—it means one row of systolic array output is exactly one vector. Similarity detection can happen immediately, per-row, without buffering the full token.</p>
+<p><strong>The streaming trick:</strong> The similarity matcher needs at most 8×m cycles per tile (7 comparisons + 1 L2-norm per key vector, for m=1024 vectors). GEMM needs K/b × m = 112×m cycles (for K=3584, b=32). The matcher finishes first, so it's off the critical path.</p>
+<hr />
+<h2 id="4-the-skeleton-in-the-closet-what-they-didnt-tell-you">4. The "Skeleton in the Closet" (What They Didn't Tell You)</h2>
+<h3 id="hidden-weakness-1-the-09-threshold-is-doing-heavy-lifting">Hidden Weakness #1: The 0.9 Threshold is Doing Heavy Lifting</h3>
+<p>The entire sparsity claim depends on a cosine similarity threshold of 0.9. There's no sensitivity analysis in the main paper. What happens at 0.85? At 0.95? If there's a "cliff" where accuracy suddenly drops, the 0.9 choice is fragile. If degradation is smooth, you could push harder for more sparsity.</p>
+<p><strong>The suspicion:</strong> The threshold was tuned to hit the 80% sparsity number while staying within 1.2% accuracy loss. This is fine for a paper, but it means the operating point isn't robust.</p>
+<h3 id="hidden-weakness-2-the-semantic-pruning-schedule-is-hand-tuned">Hidden Weakness #2: The Semantic Pruning Schedule is Hand-Tuned</h3>
+<p>Table I shows retention ratios of 40%/30%/20%/15%/10% at layers 3/6/9/18/26. This is:
+- Model-specific (tuned for LLaVA-Video-7B)
+- Dataset-specific (tuned for VideoMME/MLVU/MVBench)
+- Static (doesn't adapt to input content)</p>
+<p>The paper admits: <em>"Future work may further enhance this strategy by dynamically adapting to input contexts."</em> Translation: the current approach doesn't generalize.</p>
+<h3 id="hidden-weakness-3-the-baselines-are-generous">Hidden Weakness #3: The Baselines Are Generous</h3>
+<ul>
+<li><strong>CMC and AdapTiV</strong> were designed for ViTs, not VLMs. The authors "extend" them for VLM compatibility—but did they optimize the baselines as carefully as their own method?</li>
+<li><strong>The GPU baseline</strong> is a Jetson Orin Nano (edge GPU with ~100 TOPS INT8). Comparing a custom 28nm ASIC against an edge GPU is... charitable to themselves. Where's the comparison against an A100 with FlashAttention-2?</li>
+</ul>
+<h3 id="hidden-weakness-4-the-worst-case-is-dense">Hidden Weakness #4: The Worst Case is Dense</h3>
+<p>Section VIII-B acknowledges that if no similarity exists, sparsity drops to zero. Figure 13 shows a histogram of tile lengths with a long tail extending to nearly-full tiles. The "92.2% average utilization" hides significant variance.</p>
+<p><strong>The question they don't answer:</strong> What's the performance on a video specifically designed to minimize redundancy (rapid scene cuts, high-frequency textures, adversarial noise)?</p>
+<h3 id="hidden-weakness-5-system-integration-is-unaddressed">Hidden Weakness #5: System Integration is Unaddressed</h3>
+<p>The Chief Architect raised critical questions with no answers in the paper:
+- <strong>DVFS interaction:</strong> Content-dependent sparsity causes power spikes. How does the power controller handle this?
+- <strong>Virtualization:</strong> How do you context-switch the Focus unit when multiple VLM streams share the accelerator?
+- <strong>Security:</strong> Variable-length outputs are a classic side-channel vector. The similarity detection leaks information about input content through timing.</p>
+<hr />
+<h2 id="5-the-verdict-why-this-matters">5. The Verdict (Why This Matters)</h2>
+<h3 id="why-were-reading-this">Why We're Reading This</h3>
+<p><strong>This is a good example of hardware-algorithm co-design done right at the mechanism level, but incompletely at the system level.</strong></p>
+<p>The paper demonstrates:
+1. <strong>How to identify exploitable structure:</strong> The vector-level redundancy insight (Figure 2b) is genuine and well-motivated
+2. <strong>How to align algorithms with hardware:</strong> The GEMM-tile-local compression, conflict-free banking, and streaming dataflow are elegant
+3. <strong>How to evaluate accelerator research:</strong> Comprehensive benchmarks, RTL synthesis, open-source artifacts</p>
+<p>The paper fails to demonstrate:
+1. <strong>Robustness to adversarial inputs:</strong> No worst-case analysis beyond hand-waving
+2. <strong>Generalization across models:</strong> All tested VLMs have similar architectures
+3. <strong>System-level integration:</strong> DVFS, virtualization, security, verification all unaddressed</p>
+<h3 id="the-takeaway-for-a-phd-student">The Takeaway for a PhD Student</h3>
+<p><strong>Learn to distinguish mechanism from policy.</strong> Focus's <em>mechanism</em> is the streaming, tile-local similarity matcher. Its <em>policy</em> is the three-level concentration hierarchy with hand-tuned thresholds. The mechanism is the lasting contribution; the policy is the part that will need to be re-tuned for every new model and workload.</p>
+<p><strong>Always ask: "What's the worst case?"</strong> Average-case performance on favorable benchmarks is necessary but not sufficient. Production systems must handle adversarial inputs gracefully.</p>
+<p><strong>Check the baselines.</strong> When authors "extend" prior work for fair comparison, ask whether they optimized the baselines as carefully as their own method. The 2.35× speedup over CMC might shrink significantly with a properly-tuned CMC implementation.</p>
+<p><strong>The best sparsity papers co-design the compression format with the hardware dataflow.</strong> Focus does this well—the vector size matching the PE array width is the key insight. Look for this pattern in future papers.</p>
+<h3 id="final-assessment">Final Assessment</h3>
+<p><strong>Academic contribution:</strong> Solid. The vector-level redundancy insight and streaming architecture are genuine contributions to the field.</p>
+<p><strong>Path to production:</strong> Unclear. Too many moving parts, too much content-dependent behavior, too little consideration for system-level integration. The Chief Architect's recommendation—strip this down to a single, simple, bypassable feature—is probably the right call for anyone considering implementation.</p>
+<p><strong>Read this paper to learn:</strong> How to co-design sparsity exploitation with systolic array dataflows. <strong>Don't read this paper expecting:</strong> A complete solution ready for tapeout.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-sp-1-de-1--chief-architect-review">
+                    <h3>Chief Architect Review</h3>
+                    <div class="review-content"><h2 id="the-elevator-pitch-translation">The "Elevator Pitch" Translation</h2>
+<p>In industry terms, you are proposing a <strong>hierarchical sparsity engine</strong> that trades <strong>verification complexity and area</strong> for <strong>reduced DRAM bandwidth and compute cycles</strong> in Vision-Language Model inference. The core bet is that video redundancy is so extreme (80%+ claimed sparsity) that a custom compression unit, tightly coupled to the systolic array output path, can eliminate most off-chip traffic before it happens.</p>
+<hr />
+<h2 id="the-roi-check">The ROI Check</h2>
+<p><strong>Your paper claims:</strong> 2.4× speedup, 3.3× energy reduction, 80% average sparsity, 2.7% area overhead.</p>
+<p><strong>My reality check:</strong></p>
+<ol>
+<li>
+<p><strong>The 80% sparsity number is model-dependent and input-dependent.</strong> Your own Figure 13 shows a distribution of tile lengths with a long tail. In production, I need to design for the <em>worst case</em>, not the average. Your worst-case utilization drops to ~40% when tiles are nearly full. That's a 2.5× swing in effective throughput.</p>
+</li>
+<li>
+<p><strong>The 2.4× speedup is against a vanilla systolic array baseline.</strong> That's a strawman. Real silicon has prefetchers, compression in the memory controller, and DVFS. Against a production-tuned baseline, I'd expect 1.3-1.5× at best after accounting for:</p>
+</li>
+<li>Memory controller overhead for handling variable-length compressed tiles</li>
+<li>The "reconstruction tax" in Similarity Scatter (you claim it's off critical path, but your K&lt;256 corner case is exactly where edge devices live)</li>
+<li>
+<p>The non-deterministic latency introduced by content-dependent sparsity</p>
+</li>
+<li>
+<p><strong>The energy numbers assume DRAM dominates.</strong> True for large models, but your target is edge deployment. On edge, leakage and on-chip switching can dominate. Your 734KB of on-chip buffer isn't free—that's ~2-3mm² in 28nm just for SRAM, not counting the logic.</p>
+</li>
+</ol>
+<p><strong>Bottom line:</strong> Strip away the simulator artifacts, and you're looking at maybe <strong>1.5× real-world speedup</strong> with <strong>significant verification overhead</strong>. Is that worth it?</p>
+<hr />
+<h2 id="the-refactoring">The "Refactoring"</h2>
+<p>Your proposed implementation is too complex for a first stepping. Here's what I would actually ship:</p>
+<h3 id="the-kernel-i-would-keep">The Kernel I Would Keep:</h3>
+<ol>
+<li><strong>Semantic Concentration (SEC):</strong> The insight that cross-modal attention scores can guide token pruning is valuable. But I would <strong>not</strong> build a custom top-k sorter. I would:</li>
+<li>Use a simple threshold on attention scores (top-p style, as you mention in Section VII-D)</li>
+<li>Make the threshold a runtime-programmable register</li>
+<li>
+<p>Accept slightly lower sparsity for deterministic behavior</p>
+</li>
+<li>
+<p><strong>Vector-level similarity:</strong> The insight that 32-dimensional vectors show 64% similarity at 0.9 threshold (vs 18% for full tokens) is the real gold. But I would:</p>
+</li>
+<li>Fix the vector size at 32 (matches typical SIMD widths)</li>
+<li>Use a <strong>hash-based approximate similarity</strong> instead of exact cosine (think MinHash or SimHash)</li>
+<li>
+<p>Accept 5-10% false negatives for 10× simpler hardware</p>
+</li>
+<li>
+<p><strong>Block-wise locality:</strong> The 2×2×2 spatiotemporal block is a good design point. I would keep this.</p>
+</li>
+</ol>
+<h3 id="what-i-would-cut">What I Would Cut:</h3>
+<ol>
+<li>
+<p><strong>The convolution-style layouter:</strong> This is clever but adds verification complexity. I would use a simpler row-major layout with explicit padding, accepting some bank conflicts in exchange for simpler address generation.</p>
+</li>
+<li>
+<p><strong>The Similarity Scatter accumulator:</strong> Your 64-wide accumulator for reconstruction is overkill. I would:</p>
+</li>
+<li>Store indices in a compressed format</li>
+<li>Reconstruct lazily during the next layer's input fetch</li>
+<li>
+<p>Accept slightly higher latency for much simpler control logic</p>
+</li>
+<li>
+<p><strong>The streaming importance analyzer:</strong> Your parallel max units are elegant but unnecessary. Attention scores are already computed—just threshold them in the SFU during softmax.</p>
+</li>
+</ol>
+<hr />
+<h2 id="the-hard-questions">The Hard Questions</h2>
+<h3 id="1-how-does-this-interact-with-dvfs">1. How does this interact with DVFS?</h3>
+<p>Your sparsity is content-dependent. When sparsity drops (complex scene, many unique tokens), your power consumption spikes. This creates:
+- <strong>Thermal hotspots</strong> in the Focus unit during low-sparsity phases
+- <strong>Voltage droop</strong> if the power controller isn't expecting the load swing
+- <strong>DVFS instability</strong> if you're trying to scale frequency based on predicted workload</p>
+<p><strong>What's your answer?</strong> Do you throttle the Focus unit? Do you fall back to dense execution? This isn't in the paper.</p>
+<h3 id="2-how-does-this-interact-with-virtualization">2. How does this interact with virtualization?</h3>
+<p>In a datacenter deployment, multiple VLM instances share the accelerator. Your similarity maps and offset encodings are per-inference-stream state. Questions:
+- How do you context-switch the Focus unit?
+- What's the state size per stream? (Your 1024×32 similarity map is 32KB per tile—that adds up fast)
+- Can you guarantee isolation between tenants? (A malicious input could probe similarity patterns)</p>
+<h3 id="3-how-does-this-interact-with-security-enclaves">3. How does this interact with security enclaves?</h3>
+<p>If I'm running a VLM in a TEE (Trusted Execution Environment):
+- Your similarity detection leaks information about input content through timing side-channels
+- The variable-length compressed outputs are a classic side-channel vector
+- Your offset encoding reveals spatial structure of the input</p>
+<p><strong>For any security-sensitive deployment, Focus is dead on arrival.</strong></p>
+<h3 id="4-what-happens-when-the-model-changes">4. What happens when the model changes?</h3>
+<p>Your semantic concentration is tuned to specific layers (3/6/9/18/26) with specific retention ratios. When:
+- The model architecture changes (different layer count, different attention patterns)
+- The model is fine-tuned (attention distributions shift)
+- A new model family emerges (different tokenization, different redundancy patterns)</p>
+<p>...you need to re-tune. That's a <strong>deployment nightmare</strong> for a hardware feature. Software can adapt; silicon cannot.</p>
+<h3 id="5-whats-your-verification-story">5. What's your verification story?</h3>
+<p>You have:
+- Non-deterministic output ordering (depends on similarity detection)
+- Content-dependent latency (depends on sparsity)
+- Approximate reconstruction (similarity threshold introduces error)</p>
+<p><strong>How do I write a constrained-random testbench for this?</strong> How do I prove functional equivalence to the dense baseline? Your RTL is open-sourced, but I don't see a formal verification strategy.</p>
+<hr />
+<h2 id="the-verdict">The Verdict</h2>
+<p><strong>The Insight is Valuable:</strong> Vector-level similarity in video VLMs is real and exploitable. The 64% vs 18% similarity gap at fine granularity is a genuine finding.</p>
+<p><strong>The Implementation is Not Shippable:</strong> Too many moving parts, too much content-dependent behavior, too little consideration for system-level integration.</p>
+<p><strong>My Recommendation:</strong></p>
+<ol>
+<li>
+<p><strong>For a research follow-up:</strong> Focus (pun intended) on the vector-level similarity insight. Characterize it across more models, more datasets, more input types. Build a software library that exploits it on existing hardware (GPU tensor cores can do 32-wide operations efficiently).</p>
+</li>
+<li>
+<p><strong>For a product:</strong> Strip this down to a <strong>single, simple feature</strong>: a programmable threshold comparator on the systolic array output path that can skip writes of "similar enough" vectors. Make it optional, make it deterministic (fixed threshold, not adaptive), and make it bypassable. That's maybe 0.5% area, trivial verification, and captures 60% of the benefit.</p>
+</li>
+<li>
+<p><strong>For the next paper:</strong> Address the system-level questions. Show me Focus running in a real SoC simulation with DVFS, with multiple streams, with realistic memory controller behavior. That's when I'll take it seriously for a tapeout.</p>
+</li>
+</ol>
+<p><strong>The academic contribution is solid. The path to silicon is not.</strong></p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-sp-1-de-1--deep-learnging-and-ai-hardware-inference-review">
+                    <h3>Deep Learnging And Ai Hardware Inference Review</h3>
+                    <div class="review-content"><h1 id="paper-deconstruction-focus-a-streaming-concentration-architecture-for-efficient-vision-language-models">Paper Deconstruction: Focus - A Streaming Concentration Architecture for Efficient Vision-Language Models</h1>
+<h2 id="the-no-bs-summary">The "No-BS" Summary</h2>
+<p>This paper presents <strong>Focus</strong>, a hardware accelerator architecture for Vision-Language Models (VLMs) that processes video inputs. The core mechanism is a <strong>three-level redundancy elimination scheme</strong> that operates in a streaming fashion aligned with GEMM tiling:</p>
+<ol>
+<li><strong>Semantic-level</strong>: Prunes visual tokens based on cross-modal attention scores (which tokens does the text query actually care about?)</li>
+<li><strong>Block-level</strong>: Groups tokens into 2×2×2 spatiotemporal windows and compares within these local regions</li>
+<li><strong>Vector-level</strong>: Splits token embeddings into 32-dimensional vectors and performs cosine similarity matching at this finer granularity</li>
+</ol>
+<p>The target platform is a systolic array accelerator (32×32 PEs, 28nm, 500MHz). The key claim is 2.4× speedup and 3.3× energy reduction over prior work (AdapTiV, CMC) on video VLMs like LLaVA-Video-7B.</p>
+<hr />
+<h2 id="the-core-mechanism-a-whiteboard-explanation">The Core Mechanism: A Whiteboard Explanation</h2>
+<h3 id="the-problem-theyre-solving">The Problem They're Solving</h3>
+<p>VLMs processing video generate <strong>thousands of visual tokens</strong> (e.g., 6,272 visual tokens vs. 109 text tokens in their LLaVA-OneVision example). Adjacent video frames share massive redundancy—similar backgrounds, slowly-moving objects. Prior work either:
+- <strong>Operates at token-level granularity</strong> (too coarse—misses partial overlaps from motion)
+- <strong>Requires global comparisons</strong> (expensive memory access, breaks streaming)
+- <strong>Ignores the text prompt</strong> (prunes based on static saliency, not what the question actually asks about)</p>
+<h3 id="the-three-level-concentration">The Three-Level Concentration</h3>
+<p><strong>Level 1: Semantic Concentrator (SEC)</strong>
+- Intercepts the attention computation in transformer layers
+- Extracts the <strong>text-to-image attention block</strong> from the QK^T matrix
+- For each image token, computes max attention score across all text tokens and heads
+- Runs a <strong>streaming bubble sorter</strong> to identify top-k important tokens
+- Key insight: This runs <em>in parallel</em> with the image-to-image attention computation, so it's off the critical path</p>
+<p><strong>Level 2: Block-Level Similarity</strong>
+- After semantic pruning, remaining tokens are reorganized into a <strong>convolution-style layout</strong> (Frame × Height × Width)
+- Uses a <strong>2×2×2 sliding window</strong> spanning two adjacent frames
+- The "key token" (highest index in block) is compared against its 7 neighbors
+- This is essentially a 3D convolution sweep for similarity detection</p>
+<p><strong>Level 3: Vector-Level Matching</strong>
+- Instead of comparing full 3584-dimensional token embeddings, they split into <strong>32-dimensional vectors</strong>
+- Cosine similarity computed at vector granularity
+- Key observation from their Figure 2(b): 64% of 8-dim vectors exceed 0.9 similarity, vs. only 18% of full 3584-dim tokens
+- This captures <strong>partial overlaps</strong> from motion (token h might match parts of tokens c and d)</p>
+<h3 id="the-hardware-trick-gemm-tile-alignment">The Hardware Trick: GEMM-Tile Alignment</h3>
+<p>The clever part is how this maps to systolic array execution:</p>
+<ol>
+<li><strong>Output tiles are m×n</strong> (1024×32 in their setup)</li>
+<li><strong>Vector size = n = 32</strong> = PE array width = weight tile dimension</li>
+<li>Similarity matching happens <strong>immediately after each tile completes</strong>, before DRAM write-back</li>
+<li>A <strong>Similarity Map</strong> (1×1024 per tile) records which vectors are duplicates</li>
+<li>Subsequent GEMMs operate on <strong>concentrated vectors</strong> (fewer than 1024), with a <strong>Scatter</strong> unit reconstructing full outputs using the map</li>
+</ol>
+<p>The memory layout uses a <strong>conflict-free banking scheme</strong> where bank = f%2×4 + r%2×2 + c%2, ensuring all 8 vectors in any 2×2×2 block reside in different banks for parallel access.</p>
+<hr />
+<h2 id="the-critique-strengths-weaknesses">The Critique: Strengths &amp; Weaknesses</h2>
+<h3 id="why-it-got-in-the-strong-points">Why It Got In (The Strong Points)</h3>
+<ol>
+<li>
+<p><strong>Genuine hardware-algorithm co-design</strong>: Unlike prior work that bolts compression onto existing architectures, Focus redesigns the dataflow. The vector granularity matching the PE array width is elegant.</p>
+</li>
+<li>
+<p><strong>The streaming argument is solid</strong>: SEC overlaps with QK^T computation, SIC operates per-tile without global synchronization. This is how you actually build efficient accelerators.</p>
+</li>
+<li>
+<p><strong>The vector-level insight is novel</strong>: Figure 2(b) is the key motivation—showing that finer granularity reveals more redundancy. This isn't just "we tried smaller chunks and it worked"; there's a principled reason (motion causes partial overlaps).</p>
+</li>
+<li>
+<p><strong>Comprehensive evaluation</strong>: They test on three VLMs, three video datasets, provide RTL synthesis numbers, and include ablations. The 80% average sparsity claim is backed by actual accuracy measurements.</p>
+</li>
+<li>
+<p><strong>The conflict-free memory layout</strong>: This is a real contribution—enabling parallel similarity matching without data duplication (unlike traditional CNN accelerators that replicate inputs 8×).</p>
+</li>
+</ol>
+<h3 id="where-it-is-weak-the-skeleton-in-the-closet">Where It Is Weak (The Skeleton in the Closet)</h3>
+<ol>
+<li><strong>The baseline comparison is questionable</strong>:</li>
+<li>They compare against AdapTiV (designed for ViTs, not VLMs) and CMC (designed for video transformers, not VLMs)</li>
+<li>Both baselines are "extended to make them compatible with VLMs"—what does this mean exactly? Did they optimize the baselines fairly?</li>
+<li>
+<p>The GPU baseline uses Jetson Orin Nano (edge GPU) while their accelerator is a custom 28nm ASIC. This isn't apples-to-apples.</p>
+</li>
+<li>
+<p><strong>The 90% similarity threshold is suspiciously convenient</strong>:</p>
+</li>
+<li>They use cosine similarity &gt; 0.9 as the matching criterion</li>
+<li>No sensitivity analysis on this threshold in the main paper</li>
+<li>
+<p>What happens at 0.85 or 0.95? This could dramatically change sparsity/accuracy tradeoffs</p>
+</li>
+<li>
+<p><strong>The semantic pruning schedule is hand-tuned</strong>:</p>
+</li>
+<li>Table I shows retention ratios of 40%/30%/20%/15%/10% at layers 3/6/9/18/26</li>
+<li>This is model-specific and dataset-specific</li>
+<li>
+<p>They acknowledge "Future work may further enhance this strategy by dynamically adapting to input contexts"—meaning the current approach doesn't generalize</p>
+</li>
+<li>
+<p><strong>Limited workload diversity</strong>:</p>
+</li>
+<li>All three VLMs use similar architectures (LLaMA-based LLMs with vision encoders)</li>
+<li>No evaluation on models with different attention patterns (e.g., Qwen2-VL's native dynamic resolution, Gemini-style interleaved attention)</li>
+<li>
+<p>Video datasets are all "understanding" tasks—what about video generation or editing workloads?</p>
+</li>
+<li>
+<p><strong>The area/power numbers need context</strong>:</p>
+</li>
+<li>3.21 mm² at 28nm is reasonable, but how does this compare to the memory controller overhead they're saving?</li>
+<li>
+<p>736 mW on-chip power, but DRAM dominates (Figure 9b shows DRAM is 59% of power)—so the real question is DRAM energy, which depends heavily on access patterns</p>
+</li>
+<li>
+<p><strong>The "worst case" analysis is hand-wavy</strong>:</p>
+</li>
+<li>Section VIII-B claims the system "preserves the full tile length" when no similarity exists</li>
+<li>
+<p>But what's the actual performance degradation? They show 92.2% average utilization but don't show the distribution tail</p>
+</li>
+<li>
+<p><strong>Quantization interaction is underexplored</strong>:</p>
+</li>
+<li>Table IV shows INT8 works, but the sparsity degradation is inconsistent (0.34% on VMME vs. 0.40% on MVB for Llava-Vid)</li>
+<li>No exploration of lower bit-widths (INT4) which are increasingly common for edge deployment</li>
+</ol>
+<hr />
+<h2 id="discussion-questions-for-deep-understanding">Discussion Questions for Deep Understanding</h2>
+<h3 id="question-1-the-similarity-threshold-sensitivity">Question 1: The Similarity Threshold Sensitivity</h3>
+<p><em>"They claim 82.8% sparsity with a 0.9 cosine similarity threshold. What happens to the accuracy-sparsity Pareto frontier if you sweep this threshold from 0.8 to 0.99? Is there a 'cliff' where accuracy suddenly drops, or is it smooth?"</em></p>
+<p>This matters because:
+- If there's a cliff, the 0.9 choice is fragile
+- If it's smooth, you could potentially push to 0.85 for more sparsity with acceptable accuracy loss
+- The answer reveals whether the redundancy is "real" (smooth degradation) or "artificial" (threshold-dependent)</p>
+<h3 id="question-2-the-streaming-assumption">Question 2: The Streaming Assumption</h3>
+<p><em>"The paper claims SEC is 'off the critical path' because sorting completes before Q^(i)K^T finishes. But this assumes the attention head dimension h×n is large relative to k. What happens for models with grouped-query attention (GQA) where the effective head count is much smaller?"</em></p>
+<p>This matters because:
+- Modern LLMs increasingly use GQA (e.g., LLaMA-2 70B has only 8 KV heads)
+- If h×n shrinks, the sorting could become the bottleneck
+- The paper's analysis assumes h·n "reaches into the thousands"—but GQA breaks this</p>
+<h3 id="question-3-the-block-size-generalization">Question 3: The Block Size Generalization</h3>
+<p><em>"The 2×2×2 block size is optimized for their specific video frame rates and spatial resolutions. If you deploy on a drone camera with 120fps (more temporal redundancy) or a medical imaging system with 4K resolution (more spatial redundancy), how would you adapt the block dimensions? Is there a principled way to choose, or is it empirical tuning?"</em></p>
+<p>This matters because:
+- The paper shows block size affects performance (Figure 10c)
+- But the choice of 2×2×2 seems arbitrary—why not 1×2×4 for high-framerate video?
+- A truly general architecture would have configurable block dimensions</p>
+<hr />
+<h2 id="contextual-fit-where-does-this-sit-in-the-literature">Contextual Fit: Where Does This Sit in the Literature?</h2>
+<p><strong>Relation to TPU/Eyeriss lineage</strong>: Focus inherits the systolic array + output-stationary dataflow philosophy, but adds the novel twist of <em>in-flight compression</em>. Traditional accelerators assume dense inputs; Focus assumes you can sparsify outputs before they hit DRAM.</p>
+<p><strong>Relation to EIE/sparse accelerators</strong>: Unlike weight sparsity (EIE) or activation sparsity (SCNN), Focus exploits <em>redundancy sparsity</em>—the insight that similar values can be deduplicated. This is closer to video codec thinking than traditional DNN sparsity.</p>
+<p><strong>Relation to token pruning literature</strong>: The semantic concentration is essentially hardware-accelerated FastViT/DynamicViT-style pruning, but with the key addition of cross-modal attention guidance. The vector-level matching is genuinely new.</p>
+<p><strong>The bigger picture</strong>: This paper represents a shift from "accelerate the model as-is" to "co-design the model's redundancy structure with the hardware." If VLMs continue scaling to longer videos, this approach becomes increasingly important. The question is whether the hand-tuned pruning schedules can be automated—that's where the real impact would come from.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-sp-1-de-1--dr-microarch-reader-review">
+                    <h3>Dr Microarch Reader Review</h3>
+                    <div class="review-content"><h1 id="architectural-deconstruction-focus-a-streaming-concentration-architecture-for-vlms">Architectural Deconstruction: Focus - A Streaming Concentration Architecture for VLMs</h1>
+<h2 id="the-whiteboard-explanation">The Whiteboard Explanation</h2>
+<p>Let me walk you through how this thing actually works, stripped of the marketing language.</p>
+<p><strong>The Core Problem:</strong> Vision-Language Models (VLMs) process video by tokenizing frames into patches. A typical video input generates ~6,000+ visual tokens versus ~100 text tokens. The LLM backbone (which is 99% of the compute) processes all of these, creating massive redundancy since adjacent video frames share most of their content.</p>
+<p><strong>The Data Flow:</strong></p>
+<pre><code>Video Frames → Vision Encoder → Visual Tokens (M tokens)
+                                      ↓
+Text Prompt → Text Tokens (T tokens) → Concatenate → LLM Transformer Layers
+                                                            ↓
+                                                    [Focus Unit intercepts here]
+                                                            ↓
+                                                    Compressed Output → DRAM
+</code></pre>
+<p><strong>Focus operates at three granularities:</strong></p>
+<ol>
+<li><strong>Semantic Concentrator (SEC)</strong> - Token-level pruning in attention layers</li>
+<li>Extracts the Text-to-Image attention block from the QK^T softmax output</li>
+<li>Computes importance: <code>s_j = max(I_i,j)</code> across all text tokens and heads</li>
+<li>Runs a pipelined bubble sorter to find top-k tokens</li>
+<li>
+<p>Generates offset encodings for position recovery</p>
+</li>
+<li>
+<p><strong>Similarity Concentrator (SIC)</strong> - Vector-level redundancy removal in FC layers</p>
+</li>
+<li>Operates on GEMM output tiles (m=1024 tokens × n=32 vector width)</li>
+<li>Groups tokens into 2×2×2 spatiotemporal blocks (4 tokens from each of 2 adjacent frames)</li>
+<li>Computes cosine similarity between the "key" vector (highest index) and 7 neighbors</li>
+<li>
+<p>Replaces similar vectors (&gt;0.9 threshold) with index references</p>
+</li>
+<li>
+<p><strong>Convolution-style Layouter</strong> - Memory organization for conflict-free access</p>
+</li>
+<li>Maps tokens to 8 memory banks using: <code>Bank = f%2×4 + r%2×2 + c%2</code></li>
+<li>Enables parallel reads of all 8 block members without bank conflicts</li>
+</ol>
+<hr />
+<h2 id="the-aha-moment">The 'Aha!' Moment</h2>
+<p><strong>The clever part is the GEMM-tile alignment of the similarity detection.</strong></p>
+<p>Prior work (CMC, AdapTiV) performs token-level compression <em>after</em> writing full outputs to DRAM, then reads them back for similarity checking. This is fundamentally wasteful.</p>
+<p>Focus instead performs compression <strong>within each GEMM tile, immediately after the systolic array produces it</strong>. The key insight is:</p>
+<ol>
+<li>
+<p><strong>Vector granularity (32 elements) matches the PE array width (a=32)</strong> - This isn't coincidental. The 32-element vector is exactly what one row of the systolic array produces per cycle. By operating at this granularity, similarity detection can be pipelined with GEMM execution.</p>
+</li>
+<li>
+<p><strong>The 2×2×2 block structure creates structured sparsity</strong> - Rather than arbitrary token-to-token matching (which creates irregular access patterns), the fixed block structure means:</p>
+</li>
+<li>Each token only compares against 7 predetermined neighbors</li>
+<li>The comparison scope is bounded and predictable</li>
+<li>
+<p>The similarity map has fixed size (1×m per tile)</p>
+</li>
+<li>
+<p><strong>The Scatter-Gather scheme preserves correctness across GEMM iterations</strong> - When computing <code>Output = Input × Weight</code>, the K-dimension is tiled. The Scatter module reconstructs full m=1024 outputs from compressed p&lt;1024 inputs using the similarity map, accumulates across K iterations, then Gather re-compresses for the next layer.</p>
+</li>
+</ol>
+<p><strong>The hardware trick:</strong> Cosine similarity requires <code>p·q / (||p|| × ||q||)</code>. They pre-compute and buffer the L2-norms during the convolution-style layout phase, so the actual matcher only needs one dot-product unit plus element-wise ops. Since vector length is 32 (not 3584 for full tokens), the normalization hardware is trivial.</p>
+<hr />
+<h2 id="the-skeptics-check">The Skeptic's Check</h2>
+<p><strong>1. The "0.9 similarity threshold" is doing a lot of work:</strong></p>
+<p>Looking at Figure 2(b), they claim 64% of 8-dimensional vectors exceed 0.9 cosine similarity. But this is averaged across all layers. The variation range shown in the figure suggests some layers have much lower similarity. The paper doesn't break down which layers contribute most to the 80% sparsity claim.</p>
+<p><strong>2. The area overhead numbers need scrutiny:</strong></p>
+<p>They claim 2.7% area overhead for the Focus Unit. Let's check:
+- Total area: 3.21 mm² (Table III)
+- Systolic array (32×32 FP16 MACs): ~44% = 1.41 mm²
+- Buffer (734KB): ~43% = 1.38 mm²
+- SIC: 0.8% = 0.026 mm²
+- SEC: 1.9% = 0.061 mm²</p>
+<p>The SEC includes a top-k bubble sorter that processes M tokens. For M=6272 visual tokens and k=top 40% at layer 3, that's sorting 6272 elements to find top-2509. They claim this overlaps with QK^T computation, but the scheduling diagram (Figure 5) shows this only works because attention heads are processed sequentially. If you had a wider array processing multiple heads in parallel, the sorter becomes the bottleneck.</p>
+<p><strong>3. The convolution-style layouter buffer is suspiciously small:</strong></p>
+<p>They allocate 16KB for a "256-vector window." But the 2×2×2 block spans two frames. For a 5×5 spatial grid (25 tokens per frame), you need to buffer at least one full frame before you can start block comparisons. At 32 elements × 2 bytes (FP16) × 25 tokens = 1.6KB per frame. The 16KB seems adequate, but they don't explain how they handle frame boundaries when the video has more than 256 tokens per frame.</p>
+<p><strong>4. The "streaming" claim has caveats:</strong></p>
+<p>The Similarity Scatter module requires a 2a-wide accumulator (64 elements) to maintain throughput. This means the scatter operation takes 2 cycles per vector, not 1. For tiles where sparsity is low (worst case: no similarity found), the scatter path becomes the bottleneck.</p>
+<p><strong>5. The baseline comparisons are generous:</strong></p>
+<p>They compare against CMC and AdapTiV, both designed for ViTs, not VLMs. CMC uses an external video codec (H.264-style), which is fundamentally mismatched for transformer token similarity. AdapTiV uses sign-bit similarity, which is much coarser than cosine similarity. A fairer comparison would be against a systolic array with simple magnitude-based token pruning.</p>
+<p><strong>6. The INT8 quantization interaction (Table IV):</strong></p>
+<p>They show 0.5% average accuracy drop with INT8. But look at MiniCPM on MLVU: accuracy drops from 55.89% (dense) to 53.22% (Focus+INT8), a 2.67% absolute drop. The sparsity also drops slightly. This suggests the similarity detection is sensitive to quantization noise.</p>
+<hr />
+<h2 id="discussion-question">Discussion Question</h2>
+<p><strong>Ask yourself: What happens to this mechanism if the L1 cache misses?</strong></p>
+<p>The entire Focus architecture assumes the GEMM tile (m=1024 × n=32 = 32K elements = 64KB at FP16) fits in the output buffer (512KB). But the similarity map (1×1024 per tile) and the layouter buffer (16KB) also compete for on-chip space.</p>
+<p>More critically: the Scatter module reads the similarity map from the <em>previous</em> layer while the current layer's GEMM is executing. If that map isn't in the buffer (because a new layer started), you get a stall waiting for DRAM.</p>
+<p>The paper assumes perfect scheduling where similarity maps are always resident. In practice, with 26+ transformer layers and varying sparsity per layer, the buffer management becomes non-trivial. They don't discuss the controller complexity for handling this.</p>
+<p><strong>Second question: What's the accuracy impact on adversarial videos?</strong></p>
+<p>The 2×2×2 block structure assumes spatial and temporal locality. A video with rapid scene cuts, or adversarial content designed to maximize inter-frame differences, would defeat the similarity detection. The paper only evaluates on standard benchmarks (VideoMME, MLVU, MVBench), which likely have "normal" video characteristics.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-sp-1-de-1--prof-simtools-reader-review">
+                    <h3>Prof Simtools Reader Review</h3>
+                    <div class="review-content"><h2 id="tooling-breakdown-the-simulation-and-evaluation-infrastructure">Tooling Breakdown: The Simulation and Evaluation Infrastructure</h2>
+<p>Let me dissect the methodology behind these results, because the numbers are only as good as the tools that produced them.</p>
+<p><strong>The Simulation Stack:</strong>
+The authors built their evaluation on <strong>SCALEsim-v2</strong>, a cycle-accurate simulator originally designed for systolic array accelerators. This is a reasonable choice for modeling GEMM-dominated workloads, but it's fundamentally a <em>trace-driven</em> simulator. They feed it "layer-wise sparse traces generated from specific models and datasets in our PyTorch implementation." This is the first red flag we need to examine.</p>
+<p><strong>The Modeling Risk: Trace-Driven Simulation for Dynamic Sparsity</strong></p>
+<p>Here's where I get nervous. They're using trace-driven simulation for a technique that introduces <em>dynamic, input-dependent sparsity</em>. The similarity concentration module produces different compression ratios depending on video content—they even acknowledge this in Section VII-B with their worst/best case analysis showing tile lengths varying from near-zero to 1024 vectors.</p>
+<p>The problem? Trace-driven simulation captures <em>one execution path</em>. When they say "average utilization of 92.2%," that's averaged over their benchmark traces. But trace distortion is a real concern here:</p>
+<ol>
+<li>
+<p><strong>Warm-up periods</strong>: Did they model the pipeline fill/drain overhead when switching between tiles with different compression ratios? The convolution-style layouter and similarity matcher have state that needs to be considered.</p>
+</li>
+<li>
+<p><strong>Memory controller modeling</strong>: They use DRAMsim3 for "device-level power," but the interaction between their streaming dataflow and DRAM refresh cycles isn't discussed. At 64GB/s bandwidth with DDR4-2133, you're looking at ~7.8ns refresh intervals that could collide with their tile streaming.</p>
+</li>
+<li>
+<p><strong>The SFU sharing assumption</strong>: They claim the similarity matcher "could reuse existing SFU logic" but then implement it separately "for fairness." This is honest, but it raises the question: in a real system, would the SFU contention from RMSNorm and Softmax operations actually allow this overlap?</p>
+</li>
+</ol>
+<p><strong>The Abstraction Penalty: What They Didn't Model</strong></p>
+<p>Several critical system-level effects are abstracted away:</p>
+<ul>
+<li>
+<p><strong>NoC contention</strong>: The paper assumes data flows smoothly between the systolic array, Focus unit, and memory interface. But with a 32×32 PE array producing 32 FP16 values per cycle, that's 64 bytes/cycle to the output buffer. The convolution-style layouter then needs to reorganize this into 8 memory banks simultaneously. Where's the crossbar? What's its latency?</p>
+</li>
+<li>
+<p><strong>OS context switch overhead</strong>: Completely ignored. For edge deployment (which they claim to target), this matters.</p>
+</li>
+<li>
+<p><strong>Thermal throttling</strong>: They synthesize at the SS corner (0.81V, 125°C) with 34% timing margin, but their power numbers (736mW on-chip) don't account for sustained operation thermal effects.</p>
+</li>
+</ul>
+<p><strong>The "Impossible Physics" Check</strong></p>
+<p>Let me examine their latency claims:</p>
+<p>They claim the similarity matcher completes in "at most 8×m cycles" for m=1024 vectors, while GEMM takes "K/b × m = 112×m cycles" for K=3584, b=32. This math checks out—the matcher is indeed off the critical path <em>if</em> we assume:</p>
+<ol>
+<li>The cosine similarity computation (dot product, two L2-norms, division) completes in 8 cycles per comparison</li>
+<li>The 7 pairwise comparisons per key vector can be pipelined</li>
+</ol>
+<p>But wait—they're doing FP16 operations. A proper cosine similarity requires:
+- 32 FP16 multiplies for the dot product
+- 32 FP16 multiplies + 32 FP16 adds for each L2-norm (×2)
+- 2 square roots
+- 1 division</p>
+<p>Even with a fully pipelined design, you're looking at significant latency per comparison. Their claim of "&lt;1% of systolic array area" for the matcher seems aggressive given these requirements.</p>
+<p><strong>The Simulation Config Reality Check</strong></p>
+<p>From Table I:
+- PE Array: 32×32 at 500MHz
+- On-chip buffer: 734KB total
+- Off-chip: DDR4 4Gb×16, 2133R, 4 channels, 64GB/s</p>
+<p>At 28nm, a 32×32 FP16 systolic array with FP32 accumulation is realistic. But their 500MHz target with 34% timing margin at SS corner suggests they're being conservative—or they haven't done place-and-route yet. The "post-synthesis analysis" area numbers could balloon 20-40% after P&amp;R.</p>
+<p><strong>Artifact Availability: The Good News</strong></p>
+<p>Credit where due: they open-sourced everything at https://github.com/dubcyfor3/Focus. The artifact appendix is detailed—they provide:
+- Algorithm implementation in PyTorch
+- Cycle-accurate simulator
+- RTL in Verilog/SystemVerilog
+- Dockerized environment (implied by their detailed dependency list)</p>
+<p>This is <em>not</em> paperware. You can actually reproduce their results, which is increasingly rare.</p>
+<p><strong>The Validation Gap</strong></p>
+<p>What's missing is RTL-to-gate validation. They synthesized the design but didn't:
+1. Compare synthesis results against their cycle-accurate simulator
+2. Run gate-level simulation to verify functional correctness
+3. Validate power numbers against post-P&amp;R estimates</p>
+<p>The 2.7% area overhead claim for the Focus unit needs verification against a complete backend flow.</p>
+<hr />
+<p><strong>Discussion Question for You:</strong></p>
+<p>The authors claim their vector-wise similarity detection achieves 82.8% sparsity while maintaining accuracy within 1.2% of the dense baseline. But their similarity threshold is fixed at 0.9 cosine similarity.</p>
+<p><strong>How would you design a microbenchmark to verify that this threshold doesn't cause semantic drift over long videos?</strong> Consider: if you're replacing vectors with "similar" ones frame-by-frame, small errors could accumulate. What would you measure, and how would you isolate the effect of the similarity concentration from the semantic pruning?</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-sp-1-de-1--prof-workloads-reader-review">
+                    <h3>Prof Workloads Reader Review</h3>
+                    <div class="review-content"><h1 id="evaluation-methodology-audit-focus-architecture-paper">Evaluation Methodology Audit: Focus Architecture Paper</h1>
+<h2 id="1-methodology-audit">1. Methodology Audit</h2>
+<p><strong>Benchmark Selection:</strong>
+They use three video understanding benchmarks (VideoMME, MVBench, MLVU) across three VLMs (LLaVA-Video-7B, LLaVA-OneVision-7B, MiniCPM-V-2.6). This is a reasonable selection for video-based VLMs, covering diverse video types and durations.</p>
+<p><strong>However, note several concerns:</strong></p>
+<ol>
+<li><strong>Dataset Homogeneity:</strong> All three benchmarks are video understanding tasks. Where are the stress tests? What about:</li>
+<li>Long-form video (&gt;10 minutes)?</li>
+<li>High-motion content (sports, action sequences)?</li>
+<li>
+<p>Multi-object tracking scenarios where spatial relationships matter?</p>
+</li>
+<li>
+<p><strong>Model Selection Bias:</strong> All three models share similar architectures (vision encoder + LLM backbone). They conveniently avoid testing on architecturally different VLMs like Flamingo or models with different attention patterns.</p>
+</li>
+</ol>
+<h2 id="2-the-gotcha-graphs">2. The "Gotcha" Graphs</h2>
+<p><strong>Figure 2(b) - Similarity Distribution:</strong>
+Look carefully at this CDF plot. They show that 64% of 8-dimensional vectors exceed 0.9 cosine similarity, but only 18% of 3584-dimensional vectors do. This is mathematically expected—smaller vectors in high-dimensional spaces will naturally show higher pairwise similarity due to the concentration of measure phenomenon. This isn't necessarily evidence of "redundancy" but rather a statistical artifact of dimensionality reduction.</p>
+<p><strong>Table II - Sparsity Numbers:</strong>
+Notice the variance across datasets:
+- VMME: 82.82% sparsity
+- MLVU: 78.26% sparsity<br />
+- MVB: 78.44% sparsity</p>
+<p>That's a 4.5% swing. What happens on adversarial inputs designed to minimize redundancy? They don't show this.</p>
+<p><strong>Figure 13 - Utilization Histogram:</strong>
+They claim 92.2% average utilization, but look at the distribution—there's a long tail extending to very low vector counts per tile. What percentage of tiles fall below 50% utilization? The histogram density makes this hard to read, which is convenient.</p>
+<h2 id="3-the-missing-data">3. The Missing Data</h2>
+<p><strong>Critical Omissions:</strong></p>
+<ol>
+<li>
+<p><strong>No Accuracy vs. Sparsity Pareto Curve:</strong> They show one operating point per method. Where's the sensitivity analysis showing how accuracy degrades as you push sparsity higher? This is standard practice in pruning papers.</p>
+</li>
+<li>
+<p><strong>No Per-Layer Analysis:</strong> They apply different retention ratios at layers 3/6/9/18/26 (Table I), but never justify why these specific layers or ratios. Where's the ablation showing layer-wise sensitivity?</p>
+</li>
+<li>
+<p><strong>No Latency Breakdown by Video Length:</strong> They mention "diverse video types and durations" but never show how performance scales with video length. Does the 2.35× speedup hold for 1-minute videos? 10-minute videos?</p>
+</li>
+<li>
+<p><strong>No Comparison to GPU Tensor Core Sparsity:</strong> NVIDIA's structured sparsity (2:4) achieves ~2× speedup with minimal accuracy loss. Why not compare against this baseline?</p>
+</li>
+<li>
+<p><strong>Missing Error Bars:</strong> Table II shows single accuracy numbers. Where's the variance across multiple runs or different video samples?</p>
+</li>
+</ol>
+<h2 id="4-baseline-validity-concerns">4. Baseline Validity Concerns</h2>
+<p><strong>The AdapTiV and CMC Comparison:</strong></p>
+<p>They claim to "extend their designs to make them compatible with VLMs" (Section VII-A). This is a red flag. They're comparing against their own reimplementation of competitors, not the original systems. Key questions:</p>
+<ol>
+<li>Did they tune AdapTiV and CMC hyperparameters as carefully as their own?</li>
+<li>The original CMC paper targets video transformers, not VLMs—how much accuracy is lost in their "extension"?</li>
+</ol>
+<p><strong>The GPU Baseline:</strong></p>
+<p>They compare against Jetson Orin Nano (Table III footnote area). This is an edge GPU with 8GB memory and ~100 TOPS INT8. Comparing a custom ASIC against an edge GPU is... generous to themselves. Where's the comparison against:
+- A100 with FlashAttention-2?
+- Optimized TensorRT inference?</p>
+<h2 id="5-specific-technical-concerns">5. Specific Technical Concerns</h2>
+<p><strong>The 2×2×2 Block Size:</strong></p>
+<p>Figure 10(c) shows block size exploration, but they only test up to 2×2×2. What happens with 4×4×2 or 2×2×4? The claim that "2×2×2 is sufficient" needs more justification given that video has strong temporal correlation that might benefit from larger temporal windows.</p>
+<p><strong>Semantic Pruning Schedule:</strong></p>
+<p>Table I shows retention ratios of 40%/30%/20%/15%/10% at specific layers. This is suspiciously hand-tuned. They admit "Future work may further enhance this strategy by dynamically adapting to input contexts" (Section VII-D). So the current approach is static and potentially overfitted to their benchmark suite.</p>
+<p><strong>The Cosine Similarity Threshold:</strong></p>
+<p>They use 0.9 throughout. Figure 2(b) shows this captures 64% of 8-vectors. But what's the false positive rate? How many semantically distinct vectors happen to have &gt;0.9 similarity? This could explain some of the 1.2% average accuracy drop.</p>
+<h2 id="6-discussion-questions">6. Discussion Questions</h2>
+<ol>
+<li>
+<p><strong>Real-World Workload Question:</strong> If we ran this on a real YouTube video dataset with user-generated content (shaky cameras, variable lighting, scene cuts), do you think the 80% sparsity would hold? Their benchmarks seem to favor "clean" video content.</p>
+</li>
+<li>
+<p><strong>Adversarial Robustness:</strong> What happens if someone intentionally creates video content designed to minimize inter-frame redundancy (rapid scene changes, high-frequency textures)? Does the system gracefully degrade or catastrophically fail?</p>
+</li>
+<li>
+<p><strong>The Accuracy-Latency Tradeoff:</strong> They show 1.2% average accuracy drop for 2.35× speedup. Is this actually a good tradeoff? In production VLM systems, even 0.5% accuracy drops can be unacceptable for certain applications. Where's the discussion of deployment scenarios where this tradeoff makes sense?</p>
+</li>
+<li>
+<p><strong>Memory Bandwidth Reality Check:</strong> They claim 4.9× reduction in DRAM traffic (Section VII-F). But their baseline is a dense systolic array without any memory optimization. Modern accelerators use techniques like activation checkpointing, weight streaming, and KV-cache compression. Is the comparison fair?</p>
+</li>
+</ol>
+<h2 id="summary-assessment">Summary Assessment</h2>
+<p>The paper presents interesting ideas around multi-level concentration, but the evaluation has several methodological weaknesses:</p>
+<ul>
+<li><strong>Cherry-picked baselines:</strong> Reimplemented competitors, edge GPU comparison</li>
+<li><strong>Missing sensitivity analysis:</strong> No Pareto curves, no per-layer ablations</li>
+<li><strong>Convenient omissions:</strong> No adversarial testing, no long-video scaling</li>
+<li><strong>Statistical concerns:</strong> Single-point accuracy numbers without variance</li>
+</ul>
+<p>The 2.35× speedup claim is likely real but probably represents a best-case scenario on favorable workloads. I'd want to see this validated on a broader, more challenging benchmark suite before believing it generalizes.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-sp-1-de-1--sparsity-aware-machine-learning-accelerators-review">
+                    <h3>Sparsity Aware Machine Learning Accelerators Review</h3>
+                    <div class="review-content"><h1 id="deconstruction-focus-a-streaming-concentration-architecture-for-efficient-vision-language-models">Deconstruction: Focus — A Streaming Concentration Architecture for Efficient Vision-Language Models</h1>
+<hr />
+<h2 id="1-the-no-bs-summary">1. The "No-BS" Summary</h2>
+<p><strong>Focus</strong> is a hardware accelerator architecture for Vision-Language Models (VLMs) that reduces computation and memory traffic by progressively eliminating redundant visual tokens at three granularities:</p>
+<ol>
+<li><strong>Semantic (token) level:</strong> Uses cross-modal attention scores (text-to-image) to prune visual tokens that are irrelevant to the textual prompt—early in the pipeline, before expensive GEMM operations.</li>
+<li><strong>Block level:</strong> Groups retained tokens into small 2×2×2 spatiotemporal blocks (across two frames) and compares them locally, avoiding global token-level similarity searches.</li>
+<li><strong>Vector level:</strong> Splits token embeddings into 32-dimensional vectors and performs cosine similarity matching within each GEMM output tile, replacing similar vectors with index references to a representative.</li>
+</ol>
+<p>All three concentration stages are designed to operate <strong>on-chip, in a streaming fashion</strong>, tightly aligned with the tiling strategy of a standard systolic array accelerator. The key architectural insight is that by compressing outputs <em>immediately after each GEMM tile is produced</em>, Focus avoids writing redundant data to DRAM—unlike prior work (CMC, AdapTiV) that performs compression globally or off-chip.</p>
+<p><strong>Workload class:</strong> Video-based VLMs (e.g., LLaVA-Video, MiniCPM-V), where visual tokens dominate input length and inter-frame redundancy is high.</p>
+<p><strong>Dataflow:</strong> Weight-stationary inner loop, output-stationary outer loop for GEMM; streaming similarity matching overlapped with compute.</p>
+<hr />
+<h2 id="2-the-core-mechanism-a-whiteboard-explanation">2. The Core Mechanism: A "Whiteboard Explanation"</h2>
+<h3 id="the-problem">The Problem</h3>
+<p>VLMs tokenize video frames independently, producing thousands of visual tokens per sample. Most of these tokens are redundant—either semantically irrelevant to the question, or nearly identical to tokens in adjacent frames or spatial regions. Prior accelerators (CMC, AdapTiV) try to prune or merge tokens, but they operate at coarse granularity (full tokens) and often require global comparisons or off-chip buffering, which wastes bandwidth and limits sparsity exploitation.</p>
+<h3 id="the-focus-solution">The Focus Solution</h3>
+<p><strong>Step 1: Semantic Concentration (SEC)</strong>
+- During the attention layer, Focus extracts the <strong>text-to-image attention scores</strong> (the T×M block of the softmax output).
+- For each image token, it computes the <strong>max attention score</strong> it receives from any text token across all heads.
+- A streaming <strong>top-k bubble sorter</strong> (pipelined, overlapped with the image attention GEMM) selects the most important tokens.
+- Pruned tokens are excluded from all downstream layers; their positions are encoded as compact <strong>offsets</strong> for later reconstruction.</p>
+<p><strong>Step 2: Block-Level Concentration (SIC — Similarity Concentrator)</strong>
+- Retained tokens are reorganized into a <strong>convolution-style layout</strong>: a 2×2×2 sliding window spanning two frames, two rows, and two columns.
+- Within each block, the "key" token (highest index) is compared against its 7 neighbors using <strong>cosine similarity</strong>.
+- If a neighbor is sufficiently similar (threshold 0.9), it is replaced with an index reference to the key.
+- This is like a 3D convolutional sweep, but instead of computing features, it's detecting and collapsing redundancy.</p>
+<p><strong>Step 3: Vector-Level Concentration</strong>
+- Each token embedding is split into 32-dimensional vectors (matching the systolic array's tile width).
+- Similarity matching is performed <strong>per vector</strong>, not per token. This captures partial overlaps (e.g., when motion causes a token to align with parts of multiple neighbors).
+- Only unique vectors are stored; a <strong>similarity map</strong> records which original vectors map to which representatives.</p>
+<p><strong>Reconstruction (Similarity Scatter)</strong>
+- When the next GEMM layer reads the compressed input, the <strong>scatter</strong> module uses the similarity map to replicate vectors back to their original positions before accumulation.
+- This is done on-chip, in-stream, with a 2a-wide accumulator to maintain throughput.</p>
+<p><strong>Why This Works</strong>
+- All concentration steps are <strong>tile-local</strong>: they operate within the m×n GEMM output tile (e.g., 1024×32), so no global synchronization or off-chip access is needed.
+- The convolution-style layout enables <strong>conflict-free parallel access</strong> to memory banks, supporting multiple similarity matchers without contention.
+- The similarity matcher is lightweight (dot product + normalization), and its latency is hidden behind the much longer GEMM computation.</p>
+<hr />
+<h2 id="3-the-critique-strengths-weaknesses">3. The Critique: Strengths &amp; Weaknesses</h2>
+<h3 id="why-it-got-in-strengths">Why It Got In (Strengths)</h3>
+<ol>
+<li><strong>First VLM-specific accelerator with cross-modal semantic pruning.</strong></li>
+<li>
+<p>Prior work (CMC, AdapTiV) ignores the text prompt; Focus uses attention scores to prune tokens that are irrelevant to the <em>question</em>, not just visually redundant. This is a genuine algorithmic contribution.</p>
+</li>
+<li>
+<p><strong>Vector-level granularity is novel and effective.</strong></p>
+</li>
+<li>
+<p>The insight that sub-token (vector) similarity captures more redundancy than full-token matching is well-motivated (Fig. 2b: 64% of 8-dim vectors exceed 0.9 similarity vs. 18% for 3584-dim tokens). This translates to 10%+ higher sparsity than token-wise methods at similar accuracy.</p>
+</li>
+<li>
+<p><strong>Tight hardware-algorithm co-design.</strong></p>
+</li>
+<li>
+<p>The streaming, tile-local compression avoids the "write-then-compress" pattern of CMC, which wastes bandwidth. Focus achieves 4.9× DRAM traffic reduction vs. dense, and 3.7× vs. CMC.</p>
+</li>
+<li>
+<p><strong>Low overhead.</strong></p>
+</li>
+<li>
+<p>SEC and SIC together add only 2.7% area and 0.9% power to the systolic array. The similarity matcher is off the critical path for typical hidden dimensions.</p>
+</li>
+<li>
+<p><strong>Comprehensive evaluation.</strong></p>
+</li>
+<li>Three VLMs, three video benchmarks, plus image VLMs. Comparison against both hardware (CMC, AdapTiV, systolic array, Jetson GPU) and software (FrameFusion) baselines. Open-source RTL and simulator.</li>
+</ol>
+<h3 id="where-it-is-weak-limitations">Where It Is Weak (Limitations)</h3>
+<ol>
+<li><strong>Sparsity is input-dependent; worst-case is dense.</strong></li>
+<li>
+<p>The paper acknowledges (Sec. VIII-B) that if no similarity exists, sparsity drops to zero and the design falls back to dense execution. The histogram (Fig. 13) shows most tiles are well-compressed, but the tail exists. The "average utilization of 92.2%" is reassuring, but the variance across videos is not deeply analyzed.</p>
+</li>
+<li>
+<p><strong>Semantic pruning ratios are hand-tuned per layer.</strong></p>
+</li>
+<li>
+<p>The retention ratios (40%/30%/20%/15%/10% at layers 3/6/9/18/26) are fixed and model-specific. The paper admits (Sec. VII-D) that dynamic adaptation (e.g., top-p pruning) is left for future work. This limits generality.</p>
+</li>
+<li>
+<p><strong>Evaluation is on 7B-scale models only.</strong></p>
+</li>
+<li>
+<p>All VLMs tested are 7B parameters. The paper does not show scaling to larger models (e.g., 72B LLaVA-OneVision), where memory bottlenecks and attention costs differ.</p>
+</li>
+<li>
+<p><strong>Comparison baselines are extended, not native.</strong></p>
+</li>
+<li>
+<p>CMC and AdapTiV were designed for ViTs, not VLMs. The authors "faithfully reproduce" their algorithms and extend them to VLMs, but this is not a direct apples-to-apples comparison. The original CMC/AdapTiV papers may have different design points.</p>
+</li>
+<li>
+<p><strong>No comparison to GPU with sparsity libraries.</strong></p>
+</li>
+<li>
+<p>The GPU baseline is a Jetson Orin Nano (edge device), not a datacenter GPU with sparse tensor cores or libraries like cuSPARSE. The 7.9× speedup over GPU is impressive, but the comparison is asymmetric (custom ASIC vs. edge GPU).</p>
+</li>
+<li>
+<p><strong>Accuracy degradation is non-negligible on some benchmarks.</strong></p>
+</li>
+<li>
+<p>On MiniCPM-V + MLVU, Focus drops accuracy from 55.89% to 53.59% (2.3% absolute), while CMC drops to 43.80%. Focus is better, but the gap to dense is larger than on other benchmarks.</p>
+</li>
+<li>
+<p><strong>Block size and vector size are fixed.</strong></p>
+</li>
+<li>The design space exploration (Sec. VII-D) shows that 2×2×2 blocks and 32-dim vectors are optimal for the tested workloads, but the paper does not explore adaptivity to different video types (e.g., fast motion, scene cuts).</li>
+</ol>
+<hr />
+<h2 id="4-contextual-fit-how-does-this-relate-to-the-field">4. Contextual Fit: How Does This Relate to the Field?</h2>
+<ul>
+<li><strong>EIE (Han et al., ISCA 2016):</strong> Focus shares the philosophy of exploiting sparsity for efficiency, but EIE targets weight sparsity in fully-connected layers, not activation/token sparsity in transformers.</li>
+<li><strong>SCNN (Parashar et al., ISCA 2017):</strong> SCNN introduced Cartesian product-based sparse convolution; Focus's convolution-style layout for block matching is conceptually similar, but applied to similarity detection, not convolution.</li>
+<li><strong>AdapTiV (MICRO 2024):</strong> Focus directly compares and outperforms AdapTiV, which uses sign-bit similarity for token merging. Focus's vector-level granularity and cross-modal attention are the key differentiators.</li>
+<li><strong>CMC (ASPLOS 2024):</strong> CMC uses video codec hardware for inter-frame redundancy; Focus argues this is too coarse and off-chip. Focus's on-chip, tile-local approach is a direct rebuttal.</li>
+<li><strong>FrameFusion (arXiv 2024):</strong> A software-only token merging method for VLMs; Focus achieves higher sparsity and is hardware-accelerated.</li>
+</ul>
+<p><strong>Broader context:</strong>
+- Focus is part of a trend toward <strong>multimodal accelerators</strong> that co-optimize for vision and language, rather than treating them as separate pipelines.
+- The vector-level granularity is reminiscent of <strong>sub-word quantization</strong> in NLP (e.g., BPE), but applied to embeddings rather than vocabulary.</p>
+<hr />
+<h2 id="5-discussion-questions">5. Discussion Questions</h2>
+<ol>
+<li><strong>What happens to PE utilization and energy efficiency when video content has high motion or frequent scene cuts, causing sparsity to drop below 60%?</strong></li>
+<li>
+<p>The paper shows average utilization of 92.2%, but the histogram (Fig. 13) has a long tail. How does Focus degrade gracefully, and is there a crossover point where dense execution is preferable?</p>
+</li>
+<li>
+<p><strong>How sensitive is the accuracy-sparsity tradeoff to the choice of similarity threshold (0.9) and block size (2×2×2)?</strong></p>
+</li>
+<li>
+<p>The design space exploration (Sec. VII-D) shows these are near-optimal for the tested workloads, but what about videos with different temporal dynamics (e.g., sports, surveillance)?</p>
+</li>
+<li>
+<p><strong>Would Focus still outperform CMC and AdapTiV if the baseline used a more aggressive dataflow (e.g., row-stationary or flexible dataflow) or a larger on-chip buffer?</strong></p>
+</li>
+<li>The comparison is against weight-stationary systolic arrays with fixed buffer sizes. A more flexible baseline might close the gap.</li>
+</ol>
+<hr />
+<h2 id="6-summary-table">6. Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Focus</th>
+<th>CMC</th>
+<th>AdapTiV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Granularity</strong></td>
+<td>Vector (32-dim)</td>
+<td>Token</td>
+<td>Token</td>
+</tr>
+<tr>
+<td><strong>Cross-modal pruning</strong></td>
+<td>Yes (attention-based)</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Compression location</strong></td>
+<td>On-chip, per tile</td>
+<td>Off-chip, global</td>
+<td>On-chip, local</td>
+</tr>
+<tr>
+<td><strong>Sparsity (avg)</strong></td>
+<td>80.2%</td>
+<td>48%</td>
+<td>43%</td>
+</tr>
+<tr>
+<td><strong>DRAM traffic reduction</strong></td>
+<td>4.9× vs. dense</td>
+<td>1.3× vs. dense</td>
+<td>2.2× vs. dense</td>
+</tr>
+<tr>
+<td><strong>Area overhead</strong></td>
+<td>2.7%</td>
+<td>14.7%</td>
+<td>8.3%</td>
+</tr>
+<tr>
+<td><strong>Accuracy drop (avg)</strong></td>
+<td>1.2%</td>
+<td>2.5%</td>
+<td>1.8%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-final-verdict">7. Final Verdict</h2>
+<p><strong>Focus is a well-executed hardware-algorithm co-design paper</strong> that introduces a novel, multi-granularity approach to redundancy elimination in VLMs. The vector-level similarity matching and cross-modal semantic pruning are genuine contributions, and the streaming, tile-local architecture is a clean fit for systolic arrays. The evaluation is thorough, though the baselines are extended rather than native, and the comparison to GPUs is asymmetric.</p>
+<p><strong>The main takeaway for a PhD student:</strong>
+- Learn to distinguish between <em>mechanism</em> (how the system works) and <em>policy</em> (when/where to apply it). Focus's mechanism is the streaming, tile-local similarity matcher; its policy is the three-level concentration hierarchy.
+- Always check the evaluation section for what <em>wasn't</em> tested: larger models, datacenter GPUs, and videos with low redundancy are all missing.
+- The best sparsity papers are those that co-design the compression format with the hardware dataflow. Focus does this well.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-sp-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+            </section>
+            <hr class="paper-divider">
+        
+</main>
+
+<script>
+// Toggle expand/collapse on paper click in nav
+document.querySelectorAll('.paper-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const li = this.closest('.nav-paper');
+        li.classList.toggle('expanded');
+    });
+});
+
+// Search/filter
+document.getElementById('search').addEventListener('input', function() {
+    const q = this.value.toLowerCase();
+    document.querySelectorAll('.nav-paper').forEach(li => {
+        const text = li.textContent.toLowerCase();
+        li.classList.toggle('hidden', q && !text.includes(q));
+    });
+});
+</script>
+
+</body>
+</html>

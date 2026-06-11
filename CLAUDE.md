@@ -1,2 +1,3 @@
-Go read this entire directory. It includes a problem definition inside problem-defn/problem.txt and feedback from Gemini inside feedback/gemini-code-fdbk1.md.
-related-papers/* has related papers and their corresponding distillations inside related-papers-distillations/*  . I want to start working on this research problem ideation, solving and implementation. What should I do next.
+I have updated gemini-code-fdbk1.md. Go read this entire directory and Summarize it again. It includes a problem definition inside problem-defn/problem.txt and feedback from Gemini inside feedback/gemini-code-fdbk1.md , related-papers/* has related papers , and their corresponding distillations inside related-papers-distillations/*  . 
+Some existing repositories for reference is available inside references/available_repos.md. Go through these repositories to understand what is already available and evaluate how they can be utilised.
+I want to start working on this research problem ideation, solving and implementation. What should I do next.

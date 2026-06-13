@@ -1,0 +1,21 @@
+# OS / editor cruft
+.DS_Store
+*~
+.vscode/
+.idea/
+
+# Python (for future simulator / trace-generation work)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Build / experiment outputs
+*.log
+outputs/
+results/
+traces/
+*.tmp
